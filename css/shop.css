@@ -1,0 +1,153 @@
+body {
+
+    font-family:RobotoCondensed-Bold,Futura,Arial,Verdana,sans-serif;
+
+    background-color: rgb(229, 229, 229);
+    color: rgb(50, 50, 50);
+    font-size: 20px;
+    margin: 0%;
+    
+}
+
+.button {
+    
+    color: white;
+    background-color: rgb(221, 132, 2);
+    border-color: rgb(168, 100, 0);
+
+    font-size: 12px;
+
+}
+
+.Diaphragm__tittle {
+    font-size: 20px;
+}
+
+.Diaphragm__description {
+    color: rgb(174, 174, 174);
+    font-size: 14px;
+}
+
+.Diaphragm__guide {
+    background-color: white;
+    width: 100%;
+}
+
+.Diaphragm__guideMargin{
+        
+    padding: 20px;
+
+}
+
+.Diaphragm__webGuide {
+
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: space-between;
+
+    font-size: 14px;
+    margin: 0px 30px;
+
+}
+
+.Diaphragm__links {
+
+
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: space-between;
+
+    padding: 25px;
+    width: 70%;
+
+}
+
+.Diaphragm__pagGuide {
+
+    margin: 0px 30px;
+    font-size: 16px;
+
+}
+
+.Diaphragm__pagNavegation {
+
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: space-between;
+
+    width: 57%;
+
+}
+
+.Diaphragm__content {
+
+    padding: 50px;
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.item {
+
+    justify-content: space-between;
+    background-color: white;
+    width: 25%;
+    margin: 20px;
+
+}
+
+.item__img {
+    width: 100%;
+}
+
+.item__description{
+    
+    padding: 25px;
+    color: rgb(174, 174, 174);
+    font-size: 14px;
+    text-align:center;
+
+}
+
+.item__content {
+    text-align: justify;
+}
+
+.item__name{
+
+    color: rgb(50, 50, 50);
+    font-size: 16px;
+    
+}
+.Diaphragm__info {
+
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    color: white;
+    background-color: rgb(0, 54, 92);
+    padding: 20px;
+
+}
+
+.Diaphragm__location {
+    margin-left: 30px;
+}
+
+.Diaphragm__social {
+    margin-left: 80px;
+}
+
+.button--item {
+
+    margin-top: 20px;
+    height: 30px;
+    border-radius: 10px;
+    
+}

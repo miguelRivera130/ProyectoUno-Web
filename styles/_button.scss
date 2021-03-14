@@ -1,0 +1,27 @@
+.button {
+    color: white;
+    background-color: rgb(221, 132, 2);
+    border-color: rgb(168, 100, 0);
+    font-size: 12px;
+
+    &--newsletter {
+        margin: 15px 0px 30px;
+        padding: 5px;
+        width: 180px;
+        border-radius: 5px;
+    }
+
+    &--service {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        height: 40px;
+        border-radius: 10px;
+    }
+
+    &--item {
+        margin-top: 20px;
+        height: 30px;
+        border-radius: 10px;
+    }
+}

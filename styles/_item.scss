@@ -1,0 +1,28 @@
+.item {
+
+    justify-content: space-between;
+    background-color: white;
+    width: 25%;
+    margin: 20px;
+
+    &__img {
+    width: 100%;
+    }
+
+    &__description {
+        padding: 25px;
+        color: rgb(174, 174, 174);
+        font-size: 14px;
+        text-align:center;
+    }
+
+    &__content {
+        text-align: justify;
+    }
+
+    &__name {
+    color: rgb(50, 50, 50);
+    font-size: 16px;
+    }
+    
+}

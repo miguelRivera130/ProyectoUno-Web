@@ -1,0 +1,33 @@
+.service {
+
+    display: flex;
+    position: relative;
+    background-color: white;
+    margin-bottom: 20px;
+
+    &__margin {
+        height: 240px;
+        width: 360px;
+    }
+
+    &__img {
+        height: 100%;
+        width: 360px;
+    }
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    &__data {
+        width: 60%;
+    }
+
+    &__description {
+        color: rgb(174, 174, 174);
+        font-size: 14px;
+    }
+
+}

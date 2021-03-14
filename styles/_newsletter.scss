@@ -1,0 +1,26 @@
+.newsletter {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    background-color: white;
+    width: 360px;
+
+    &__img {
+        width: 360px;
+        height: 240px;
+        margin-bottom: 15px;
+    }
+
+    &__data {
+        width: 80%;
+    }
+
+    &__description {
+        color: rgb(174, 174, 174);
+        font-size: 14px;
+    }
+
+}

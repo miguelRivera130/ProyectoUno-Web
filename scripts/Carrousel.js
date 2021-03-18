@@ -9,6 +9,16 @@ for (let i = 0; i < items.length; i++) {
     item = items[i];
     let slider = sliders[i]
 
+    function handleInterval() {
+        currentSlide++;
+
+        if (currentSlide >= slider.children.length) {
+            currentSlide = 0;
+        }
+        slider.style.transform = `translate( -${slider.clientWidth * currentSlide}px, 0px)`;
+    }
+
+
     function handleMouseEnter() {
         intervalId = setInterval(handleInterval, 1500);
     }

@@ -8,6 +8,10 @@ for (let i = 0; i < services.length; i++) {
     let thumb = thumbs[i]
     service = services[i]
 
+    function handleZoomInterval() {
+        thumb.style.transform = `scale( 1.5, 1.5)`;
+    }
+
     function handleThumbEnter() {
         sizeId = setInterval(handleZoomInterval, 0500);
 

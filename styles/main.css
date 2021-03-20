@@ -307,23 +307,91 @@
   border-radius: 10px;
 }
 
+.button--membership {
+  position: absolute;
+  margin-top: 20px;
+  right: 60px;
+  height: 30px;
+  border-radius: 10px;
+}
+
 .membership {
   width: 70%;
   height: 420px;
   background-color: white;
   margin-left: 15%;
+  color: #aeaeae;
+  font-size: 14px;
 }
 
 .membership__current {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .membership__img {
   height: 420px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.membership__thumbs {
+  background-color: white;
+  width: 100%;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.membership__content {
+  padding: 50px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+.membership__thumbs {
+  position: absolute;
+  width: 30%;
+  margin-top: 20px;
+}
+
+.membership__thumb {
+  border: 5px solid #f0eeee;
+  border-radius: 30px;
+  padding: 10px;
+  -webkit-transition: 1s;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.membership__thumb:hover {
+  background: #f0eeee;
+  border: 5px solid #b8b8b8;
+}
+
+.membership__name {
+  color: #323232;
+  font-size: 16px;
+}
+
+.membership #membership:checked {
+  background: #dd8402;
+  border: 5px solid #a86400;
+}
+
+.membership #newsletter:checked {
+  background: #dd8402;
+  border: 5px solid #a86400;
 }
 
 body {

@@ -1,28 +1,38 @@
-const services = document.querySelectorAll('.service');
-const thumbs = document.querySelectorAll('.service__thumb');
-let sizeId;
+const current = document.querySelector('.membership__current');
+const thumbs = document.querySelectorAll('.membership__thumb');
+const membership = document.querySelector('.memberhip');
+const img = document.querySelector('.membership__img');
+let thumb;
 
-//zoom img
-for (let i = 0; i < services.length; i++) {
+for (let i = 0; i < thumbs.length; i++) {
 
-    let thumb = thumbs[i]
-    service = services[i]
+    thumb = thumbs[i];
 
-    function handleZoomInterval() {
-        thumb.style.transform = `scale( 1.5, 1.5)`;
-    }
+    thumb.addEventListener('check', handleThumbClick);
 
-    function handleThumbEnter() {
-        sizeId = setInterval(handleZoomInterval, 0500);
-
-    }
-
-    service.addEventListener('mouseenter', handleThumbEnter);
-
-    function handleThumbLeave() {
-        clearInterval(sizeId);
-        thumb.style.transform = `scale( 1, 1)`
-    }
-
-    service.addEventListener('mouseleave', handleThumbLeave);
 }
+
+function handleThumbClick() {
+
+    switch (thumb) {
+
+        case 0:
+            let characterN = "Suscription"
+            break;
+
+        case 1:
+            
+            let characterImg = "./data/newsletter.jpg";
+            img.setAttribute('src', characterImg);
+            
+            let characterN = "Suscription";
+            membership.setAttribute('&__name', characterN);
+
+            let characterDescription = "suscribe tu correo para mantener contacto para directo y agil sobre cualquier novedad de la pagina"
+            membership.setAttribute('&__description')
+            break;
+
+    }
+
+}
+

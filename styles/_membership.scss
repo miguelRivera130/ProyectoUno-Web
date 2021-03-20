@@ -4,13 +4,65 @@
     height: 420px;
     background-color: white;
     margin-left: 15%;
+    color: rgb(174, 174, 174);
+    font-size: 14px;
 
     &__current {
         display: flex;
+        align-items: center;
     }
 
     &__img {
         height: 420px;
         object-fit: cover;
+    }
+
+    &__thumbs {
+        background-color: white;
+        width: 100%;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__content {
+        padding: 50px;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    &__thumbs {
+        position: absolute;
+        width: 30%;
+        margin-top: 20px;
+    }
+
+    &__thumb {
+        border: 5px solid rgb(240, 238, 238);
+        border-radius: 30px;
+        padding: 10px;
+        transition: 1s;
+        cursor: pointer;
+    }
+
+    &__thumb:hover {
+        background: rgb(240, 238, 238);
+        border: 5px solid rgb(184, 184, 184);
+    }
+
+    
+
+    &__name {
+        color: rgb(50, 50, 50);
+        font-size: 16px;
+    }
+
+    #membership:checked {
+        background: rgb(221, 132, 2);
+        border: 5px solid rgb(168, 100, 0);
+    }
+    #newsletter:checked {
+        background: rgb(221, 132, 2);
+        border: 5px solid rgb(168, 100, 0);
     }
 }

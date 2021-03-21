@@ -2,6 +2,7 @@
 
     justify-content: space-between;
     background-color: white;
+    position: relative;
     width: 25%;
     margin: 20px;
     overflow: hidden;
@@ -29,6 +30,7 @@
 
     &__content {
         text-align: justify;
+        margin-bottom: 100px;
     }
 
     &__name {

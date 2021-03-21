@@ -318,37 +318,73 @@
 .membership {
   width: 70%;
   height: 420px;
-  background-color: white;
   margin-left: 15%;
-  color: #aeaeae;
   font-size: 14px;
+  background-color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #aeaeae;
+}
+
+.membership__margin {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
 }
 
 .membership__current {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  transition: -webkit-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+  height: 420px;
 }
 
 .membership__img {
-  height: 420px;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 .membership__thumbs {
-  background-color: white;
-  width: 100%;
-  height: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: absolute;
+  width: 100%;
+  bottom: 20px;
+}
+
+.membership__thumbs input {
+  display: none;
+}
+
+.membership__thumb {
+  border: 2px solid #00365C;
+  border-radius: 10px;
+  padding: 5px;
+  -webkit-transition: 1s;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.membership__thumb:hover {
+  background: #00365C;
+}
+
+.membership__thumb:not(:last-child) {
+  margin-right: 20px;
 }
 
 .membership__content {
@@ -357,26 +393,6 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
-}
-
-.membership__thumbs {
-  position: absolute;
-  width: 30%;
-  margin-top: 20px;
-}
-
-.membership__thumb {
-  border: 5px solid #f0eeee;
-  border-radius: 30px;
-  padding: 10px;
-  -webkit-transition: 1s;
-  transition: 1s;
-  cursor: pointer;
-}
-
-.membership__thumb:hover {
-  background: #f0eeee;
-  border: 5px solid #b8b8b8;
 }
 
 .membership__name {

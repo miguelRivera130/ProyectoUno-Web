@@ -24,8 +24,8 @@ for (let i = 0; i < thumbs.length; i++) {
                 img.setAttribute('src', srcImg);
                 srcName.innerHTML = 'Membresia';
                 srcDescription.innerHTML = 'Conviértete en miembro para mantener una base de datos para la realización de múltiples proyectos con tus características y gustos además de conseguir descuentos en sesiones y estudios a la venta.';
-                srcBenefitTwo.innerHTML = 'Descuentos y prioridad en la organizacion de sesiones.';
-                srcBenefitThree.innerHTML = 'Disponivilidad en la seleccion de modelos.';
+                srcBenefitTwo.innerHTML = 'Descuentos y prioridad en la organización de sesiones.';
+                srcBenefitThree.innerHTML = 'Disponibilidad en la selección de modelos.';                
                 srcBenefitFour.innerHTML = 'Descuentos y acceso a la compra de proyectos limitados.';
                 break;
                 
@@ -33,7 +33,7 @@ for (let i = 0; i < thumbs.length; i++) {
                 srcImg = "./data/newsletter.jpg"
                 img.setAttribute('src', srcImg);
                 srcName.innerHTML = 'Suscripción';
-                srcDescription.innerHTML = 'Suscribe tu correo electronico para enterarte de primera mano todas las novedades en cuanto a servicios y productos presentes en la pagina.';
+                srcDescription.innerHTML = 'Suscribe tu correo electrónico para enterarte de primera mano todas las novedades en cuanto a servicios y productos presentes en la pagina.';                
                 srcBenefitTwo.innerHTML = '';
                 srcBenefitThree.innerHTML = '';
                 srcBenefitFour.innerHTML = '';

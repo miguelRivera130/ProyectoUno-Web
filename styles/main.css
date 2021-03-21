@@ -332,24 +332,15 @@
 
 .membership__margin {
   height: 100%;
-  width: 100%;
-  overflow: hidden;
+  width: 336px;
   position: relative;
-}
-
-.membership__current {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-transition: -webkit-transform 1s ease-in-out;
-  transition: -webkit-transform 1s ease-in-out;
-  transition: transform 1s ease-in-out;
-  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
-  height: 420px;
 }
 
 .membership__img {
   height: 100%;
+  width: 100%;
+  min-width: 336px;
+  max-width: 336px;
   -o-object-fit: cover;
      object-fit: cover;
 }

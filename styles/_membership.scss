@@ -11,18 +11,15 @@
 
     &__margin {
         height: 100%;
-        width: 100%;
-        overflow: hidden;
+        width: 336px;
         position: relative;
-    }
-    &__current {
-        display: flex;
-        transition: transform 1s ease-in-out;
-        height: 420px;
     }
 
     &__img {
-        height: 100%;
+        height: 100%;          
+        width: 100%;
+        min-width: 336px;
+        max-width: 336px;
         object-fit: cover;
     }
 

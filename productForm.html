@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+
+<body>
+
+    <header class="Diaphragm__guide">
+        <div class="Diaphragm__guideMargin">
+
+
+            <header class="Diaphragm__webGuide">
+
+                <img class="Diaphragm__logo" src="./data/logo.png">
+
+                <div class="Diaphragm__links">
+                    <a href="./index.html" data-toggle='tab'> Inicio </a>
+                    <a href="./shop.html" data-toggle='tab'> Tienda </a>
+                    <a href="#Diaphragm Diaphragm--info" data-toggle='tab'> Contáctanos </a>
+                    <a href="./membership.html" data-toggle='tab'> Membresía </a>
+                </div>
+
+            </header>
+
+
+            <footer class="Diaphragm__pagGuide">
+
+                <p class="Diaphragm__tittle"><strong> Toma todas las ventajas posibles para cumplir tus proyectos
+                    </strong></p>
+
+            </footer>
+
+
+        </div>
+    </header>
+
+    <form class="productForm">
+
+        <label class="productForm__label" for="nombre">Nombre</label>
+        <input class="productForm__input" id="nombre" type="text" name="name" placeholder="Nombre de sesión">
+
+        <label class="productForm__label" for="autor">Autor</label>
+        <input class="productForm__input" class="productForm__input" id="autor" name="author" type="text"
+            placeholder="Nombre del autor">
+
+        <label class="productForm__label" for="camara">Camara</label>
+        <input class="productForm__input" id="camara" type="text" name="cameraType" placeholder="Modelo de camara usada">
+
+        <label class="productForm__label">Tipo de Sesión</label>
+
+        <label class="productForm__label productForm__label--checkbox">
+            <input class="productForm__checkbox" type="checkbox" name="sessionType_e">
+            Estudio
+        </label>
+
+        <label class="productForm__label productForm__label--checkbox">
+            <input class="productForm__checkbox" type="checkbox" name="sessionType_eA">
+            Espacio abierto
+        </label>
+
+        <label class="productForm__label productForm__label--checkbox">
+            <input class="productForm__checkbox" type="checkbox" name="sessionType_p">
+            Producto
+        </label>
+
+        <label class="productForm__label" for="lente">Lente</label>
+        <input class="productForm__input" id="lente" type="text" name="configuration_lens" placeholder="ƒ/ del lente utilizado">
+
+        <label class="productForm__label" for="longitud">Longitud focal</label>
+        <input class="productForm__input" id="longitud" type="text" name="configuration_length" placeholder="mm de distancia de enfoque">
+
+        <label class="productForm__label" for="iso">ISO</label>
+        <input class="productForm__input" id="iso" type="text" name="configuration_iso" placeholder="ISO utilizado">
+
+        <label class="productForm__label" for="exposicion">Exposición</label>
+        <input class="productForm__input" id="exposicion" type="text" name="configuration_expisition" placeholder="tiempo de exposición">
+
+        <label class="productForm__label" for="precio">Precio</label>
+        <input class="productForm__input" id="precio" type="text" name="price" placeholder="Precio de venta de la sesión">
+
+        <label class="productForm__label" for="descripcion">Descripción</label>
+        <input class="productForm__input" id="descripcion" type="text" name="description" placeholder="Describe aquí tu sesión">
+
+        <button class="button button--form" type="submit">Enviar</button>
+
+    </form>
+
+    <footer class="Diaphragm__info" id="Diaphragm Diaphragm--info">
+
+        <div class="Diaphragm__location">
+            <img class="Diaphragm__logo" src="./data/logoNegativo.png">
+            <p class="Diaphragm__address">Cr.4a# 15-26 (Cali, Colombia)</p>
+            <p class="Diaphragm__gmail">DiaphragmFocus@gmail.com</p>
+            <p class="Diaphragm__phoneNumber">318- 452-3928</p>
+        </div>
+        <div class="Diaphragm__social">
+            <h3 class="Diaphragm__networks"> Social </h3>
+            <p>Instagram</p>
+            <p>Twitter</p>
+            <p>Facebook</p>
+            <p>Behance</p>
+        </div>
+
+    </footer>
+
+    <script src="./scripts/productForm.js"></script>
+
+</body>
+
+</html>

@@ -404,8 +404,22 @@
   border: 5px solid #a86400;
 }
 
+.productForm {
+  width: 70%;
+  margin-left: 15%;
+}
+
+.productForm__label {
+  display: block;
+  margin-top: 10px;
+}
+
+.productForm__input {
+  display: block;
+}
+
 body {
-  font-family: RobotoCondensed-Bold,Futura,Arial,Verdana,sans-serif;
+  font-family: RobotoCondensed,Futura,Arial,Verdana,sans-serif;
   background-color: #e5e5e5;
   color: #323232;
   font-size: 20px;

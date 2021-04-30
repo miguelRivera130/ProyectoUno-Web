@@ -16,4 +16,17 @@
         display: block;
     }
 
+    &__success {
+        color: green;
+    }
+
+    &__error {
+        color: red;
+    }
+
+    &__image {
+        width: 200px;
+        margin: 10px;
+    }
+
 }

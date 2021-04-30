@@ -42,15 +42,28 @@
 
     <form class="productForm">
 
-        <label class="productForm__label" for="nombre">Nombre</label>
-        <input class="productForm__input" id="nombre" type="text" name="name" placeholder="Nombre de sesión">
+        <p class="productForm__loader hidden">
+            Cargando producto...
+        </p>
+
+        <p class="productForm__success hidden">
+            Producto agregado
+        </p>
+
+        <p class="productForm__error hidden">
+            Es necesario que complete toda la informacion para subir el producto
+        </p>
+
+        <label class="productForm__label" for="nombre">Titulo</label>
+        <input class="productForm__input" id="nombre" type="text" name="name" placeholder="Nombre del proyecto">
 
         <label class="productForm__label" for="autor">Autor</label>
         <input class="productForm__input" class="productForm__input" id="autor" name="author" type="text"
             placeholder="Nombre del autor">
 
         <label class="productForm__label" for="camara">Camara</label>
-        <input class="productForm__input" id="camara" type="text" name="cameraType" placeholder="Modelo de camara usada">
+        <input class="productForm__input" id="camara" type="text" name="cameraType"
+            placeholder="Modelo de camara usada">
 
         <label class="productForm__label">Tipo de Sesión</label>
 
@@ -70,22 +83,31 @@
         </label>
 
         <label class="productForm__label" for="lente">Lente</label>
-        <input class="productForm__input" id="lente" type="text" name="configuration_lens" placeholder="ƒ/ del lente utilizado">
+        <input class="productForm__input" id="lente" type="text" name="configuration_lens"
+            placeholder="ƒ/ del lente utilizado">
 
         <label class="productForm__label" for="longitud">Longitud focal</label>
-        <input class="productForm__input" id="longitud" type="text" name="configuration_length" placeholder="mm de distancia de enfoque">
+        <input class="productForm__input" id="longitud" type="text" name="configuration_length"
+            placeholder="mm de distancia de enfoque">
 
         <label class="productForm__label" for="iso">ISO</label>
         <input class="productForm__input" id="iso" type="text" name="configuration_iso" placeholder="ISO utilizado">
 
         <label class="productForm__label" for="exposicion">Exposición</label>
-        <input class="productForm__input" id="exposicion" type="text" name="configuration_expisition" placeholder="tiempo de exposición">
+        <input class="productForm__input" id="exposicion" type="text" name="configuration_exposition"
+            placeholder="tiempo de exposición">
 
         <label class="productForm__label" for="precio">Precio</label>
-        <input class="productForm__input" id="precio" type="text" name="price" placeholder="Precio de venta de la sesión">
+        <input class="productForm__input" id="precio" type="number" name="price"
+            placeholder="Precio de venta de la sesión">
 
         <label class="productForm__label" for="descripcion">Descripción</label>
-        <input class="productForm__input" id="descripcion" type="text" name="description" placeholder="Describe aquí tu sesión">
+        <input class="productForm__input" id="descripcion" type="text" name="description"
+            placeholder="Describe aquí tu sesión">
+
+        <img class="productForm__image hidden" src="" />
+        <label class="productForm__label" for="image">Fotografías</label>
+        <input class="productForm__input" id="image" type="file" name="image">
 
         <button class="button button--form" type="submit">Enviar</button>
 
@@ -108,6 +130,11 @@
         </div>
 
     </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+
 
     <script src="./scripts/productForm.js"></script>
 

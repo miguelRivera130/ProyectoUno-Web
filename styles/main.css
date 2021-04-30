@@ -414,8 +414,29 @@
   margin-top: 10px;
 }
 
+.productForm__label--checkbox {
+  margin-top: 2px;
+}
+
 .productForm__input {
   display: block;
+}
+
+.productForm__success {
+  color: green;
+}
+
+.productForm__error {
+  color: red;
+}
+
+.productForm__image {
+  width: 200px;
+  margin: 10px;
+}
+
+.hidden {
+  display: none !important;
 }
 
 body {

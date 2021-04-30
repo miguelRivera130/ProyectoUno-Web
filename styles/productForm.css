@@ -15,4 +15,17 @@
 .productForm__input {
   display: block;
 }
+
+.productForm__success {
+  color: green;
+}
+
+.productForm__error {
+  color: red;
+}
+
+.productForm__image {
+  width: 200px;
+  margin: 10px;
+}
 /*# sourceMappingURL=productForm.css.map */

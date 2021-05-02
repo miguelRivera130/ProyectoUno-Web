@@ -430,6 +430,13 @@
   color: red;
 }
 
+.productForm__images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 10px;
+}
+
 .productForm__image {
   width: 200px;
   margin: 10px;

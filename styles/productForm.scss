@@ -24,8 +24,13 @@
         color: red;
     }
 
+    &__images {
+        display: flex;
+        margin-right: 10px;
+    }
+
     &__image {
-        width: 200px;
+        height: 150px;
         margin: 10px;
     }
 

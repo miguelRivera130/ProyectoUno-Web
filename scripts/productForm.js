@@ -18,19 +18,32 @@ const productFormSuccess = document.querySelector('.productForm__success');
 const productFormloader = document.querySelector('.productForm__loader');
 const productFormError = document.querySelector('.productForm__error');
 const productFormImage = document.querySelector('.productForm__image');
+const productFormImages = document.querySelector('.productForm__images');
+
+const imageFiles = [];
 
 productForm.image.addEventListener('change', function () {
 
-    var reader = new FileReader();
+    const file = productForm.image.files[0];
+    if (!file) {
 
-    reader.onload = function (event) {
-
-        productFormImage.classList.remove('hidden');
-        productFormImage.setAttribute('src', event.target.result);
+        productFormImage.classList.add('hidden');
+        return;
 
     }
 
-    reader.readAsDataURL(productForm.image.files[0]);
+    const reader = new FileReader();
+    reader.onload = function (event) {
+
+        const productFormImage = document.createElement('img')
+        productFormImage.classList.add('productForm__image');
+        productFormImage.setAttribute('src', event.target.result);
+        productFormImages.appendChild(productFormImage);
+
+    }
+
+    reader.readAsDataURL(file);
+    imageFiles.push(file);
 
 });
 
@@ -62,40 +75,61 @@ productForm.addEventListener('submit', function (event) {
 
         productFormError.innerText = 'Es necesario que complete toda la informacion para subir el producto';
         productFormError.classList.remove('hidden');
-        return;
+        // return;
 
     }
 
-    const file = productForm.image.files[0];
+    productFormSuccess.classList.add('hidden');
+    productFormloader.classList.remove('hidden');
 
-    //creacion de referencias de imagenes en el storage
-    var sr = firebase.storage().ref();
-    var fileRef = sr.child(`images/${product.name}/${file.name}`);
+    //subida de informacion a firestore
+    db.collection('products').add(product).then(function (docRef) {
 
-    //subida de imagen
-    fileRef.put(file).then(function (snapshot) {
+        const uploadPromises = [];
+        const downloadURLPromises = [];
 
-        //obtencion del url de cada imagen
-        snapshot.ref.getDownloadURL().then(function (downloadURL) {
+        //prolemas con imageFiles ARREGLAR
 
-            product.imageUrl = downloadURL;
-            product.imageRef = snapshot.ref.fullPath;
+        imageFiles.forEach(function (file) {
+            var storageRef = firebase.storage().ref();
+            var fileRef = storageRef.child(`products/${docRef.id}/${file.name}`);
 
-            //subida de informacion a firestore
-            db.collection('products').add(product).then(function (docRef) {
-                productFormSuccess.classList.remove('hidden');
-                productFormloader.classList.add('hidden');
-            })
-                .catch(function (error) {
-                    productFormError.innerText = 'Ocurrió un error durante la subida del producto, intentelo nuevamente';
-                    productFormloader.classList.add('hidden');
-                    productFormError.classList.remove('hidden');
+            //subida de imagen
+            uploadPromises.push(fileRef.put(file));
+        });
+        console.log(imageFiles);
+
+        Promise.all(uploadPromises).then(function (snapshots) {
+
+            snapshots.forEach(function (snapshot) {
+
+                //obtencion del url de cada imagen
+                downloadURLPromises.push(snapshot.ref.getDownloadURL());
+            });
+
+            Promise.all(downloadURLPromises).then(function (downloadURLs) {
+
+                const images = [];
+                downloadURLs.forEach(function (url, index) {
+                    images.push({
+                        url: url,
+                        ref: snapshots[index].ref.fullPath
+                    });
                 });
 
+                db.collection('products').doc(docRef.id).update({
+                    images: images
+                }).then(function () {
+                    productFormSuccess.classList.remove('hidden');
+                    productFormloader.classList.add('hidden');
+                });
+            });
+
         });
+    }).catch(function (error) {
+        productFormError.innerText = 'Ocurrió un error durante la subida del producto, intentelo nuevamente';
+        productFormloader.classList.add('hidden');
+        productFormError.classList.remove('hidden');
     });
-
-
-
 
 });

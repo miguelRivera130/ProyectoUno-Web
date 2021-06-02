@@ -1,18 +1,4 @@
 
-var firebaseConfig = {
-    apiKey: "AIzaSyA-G5ZZ4eH9TJonqNCK3VHxEUXrzht3rQA",
-    authDomain: "do-proyecto-web.firebaseapp.com",
-    projectId: "do-proyecto-web",
-    storageBucket: "do-proyecto-web.appspot.com",
-    messagingSenderId: "724123121935",
-    appId: "1:724123121935:web:a450dd126e4e1e7e3d667a",
-    measurementId: "G-H2JKK223WD"
-};
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-
-const db = firebase.firestore();
-
 const productForm = document.querySelector('.productForm');
 const productFormSuccess = document.querySelector('.productForm__success');
 const productFormloader = document.querySelector('.productForm__loader');
@@ -55,18 +41,12 @@ productForm.addEventListener('submit', function (event) {
         name: productForm.name.value,
         author: productForm.author.value,
         cameraType: productForm.cameraType.value,
-        sessionTypes: [],
-        configuration: productForm.configuration_lens.value + ' ' + productForm.configuration_length.value + '\n' + productForm.configuration_iso.value + ' ' + productForm.configuration_exposition.value,
+        sessionType: productForm.type.value,
+        configuration: productForm.configuration_lens.value + 'mm' + ' ' + 'ƒ/' + productForm.configuration_length.value + '\n' + 'ISO' + productForm.configuration_iso.value + ' ' + productForm.configuration_exposition.value + 'S',
         price: parseFloat(productForm.price.value),
         description: productForm.description.value
 
     }
-
-
-
-    if (productForm.sessionType_e.checked) product.sessionTypes.push('Estudio');
-    if (productForm.sessionType_eA.checked) product.sessionTypes.push('Espacio abierto');
-    if (productForm.sessionType_p.checked) product.sessionTypes.push('Producto');
 
     productFormError.classList.add('hidden');
     productFormloader.classList.remove('hidden');

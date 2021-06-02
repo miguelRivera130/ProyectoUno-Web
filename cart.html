@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+
+<body>
+
+    <div class="Diaphragm">
+
+        <header class="Diaphragm__guide">
+            <div class="Diaphragm__guideMargin">
+
+
+                <header class="Diaphragm__webGuide">
+
+                    <img class="Diaphragm__logo" src="./data/logo.png">
+
+                    <div class="Diaphragm__links">
+                        <a href="./index.html"> Inicio </a>
+                        <a href="./shop.html"> Tienda </a>
+                        <a href="#Diaphragm Diaphragm--info" data-toggle='tab'> Contáctanos </a>
+                        <a href="./membership.html"> Membresía </a>
+                        <a href="./cart.html" class="cartBtn">
+                            <img src="./data/cart__off.png">
+                            <span></span>
+                        </a>
+                        <button class="authButtons__login hideLoggedIn"> Ingresa tu cuenta</button>
+                        <button class="authButtons__logout hidden showLoggedIn"> Cerrar sesión </button>
+                    </div>
+
+                </header>
+
+            </div>
+        </header>
+
+        <section class="list"> </section>
+    </div>
+
+    <main class="checkout">
+        <section class="checkout__list cartList">
+
+        </section>
+
+        <div class="checkout__division"> </div>
+
+        <section class="checkout__summary">
+            <h3 class="checkout__total">Total: $ <span></span></h3>
+
+            <form class="checkout__form">
+                <div class="field">
+                    <label class="field__label" for="ccnumber">Numero de tarjeta</label>
+                    <input class="field__input" id="ccnumber" name="ccnumber" type="text" placeholder="">
+                </div>
+
+                <div class="field">
+                    <label class="field__label" for="address">Nombre de titular</label>
+                    <input class="field__input" id="address" name="address" type="text" placeholder="">
+                </div>
+
+                <div class="field">
+                    <label class="field__label" for="address">Caducidad</label>
+                    <input class="field__input" id="address" name="address" type="date" placeholder="">
+                </div>
+
+                <div class="field">
+                    <label class="field__label" for="address">CVC</label>
+                    <input class="field__input" id="address" name="address" type="text" placeholder="">
+                </div>
+
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+
+    <script src="./scripts/general.js"></script>
+    <script src="./scripts/cart.js"></script>
+    <script src="./scripts/authUtils.js"></script>
+
+</body>
+
+</html>

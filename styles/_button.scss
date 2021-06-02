@@ -2,7 +2,7 @@
     color: white;
     background-color: rgb(221, 132, 2);
     border-color: rgb(168, 100, 0);
-    font-size: 12px;
+    font-size: 14px;
 
     &--newsletter {
         margin: 15px 0px 30px;
@@ -20,9 +20,10 @@
     }
 
     &--item {
-        position: absolute;
-        bottom: 20px;
+        align-items: center;
         height: 30px;
+        width: 40%;
+        margin-top: 10px;
         border-radius: 10px;
     }
 

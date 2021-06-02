@@ -1,16 +1,20 @@
 @import 'service';
 @import 'Diaphragm';
-@import 'item';
 @import 'newsletter';
 @import 'button';
 @import 'membership';
 @import 'productForm';
 @import 'general';
+@import 'product';
+@import 'productForm';
+@import 'productInfo';
+@import 'modal';
+@import 'cart';
 
 
 body {
 
-    font-family:RobotoCondensed,Futura,Arial,Verdana,sans-serif;
+    font-family:Mazzard,Montserrat,Arial,Verdana,sans-serif;
 
     background-color: rgb(229, 229, 229);
     color: rgb(50, 50, 50);
@@ -18,3 +22,13 @@ body {
     margin: 0%;
     
 }
+
+@font-face {
+    font-family: "Mazzard";
+    src: url("../data/fonts/MazzardH-Bold.otf");
+  }
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../data/fonts/Montserrat-Regular.ttf");
+  }

@@ -1,0 +1,18 @@
+.productInfo {
+
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 100%;
+    margin-top: 5%;
+    font-size: 16px;
+    padding: 20px;
+
+    background-color: white;
+    color: rgb(174, 174, 174);
+
+    &__final{
+        align-items: center;
+    }
+
+}

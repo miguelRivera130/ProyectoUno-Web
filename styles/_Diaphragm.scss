@@ -2,6 +2,7 @@
 
     &__tittle {
         font-size: 20px;
+        font-family:Mazzard,Montserrat,Arial,Verdana,sans-serif;
     }
 
     &__description {
@@ -55,11 +56,13 @@
         flex-direction: row;
         flex-flow: wrap;
         justify-content: space-between;
+        text-decoration: none;
         padding: 25px;
         width: 70%;
     }
 
     &__pagGuide {
+        text-decoration: none;
         margin: 0px 30px;
         font-size: 16px;
     }
@@ -71,9 +74,15 @@
         justify-content: space-between;
         width: 70%;
     }
+    
+    &__filters {
+        display: flex;
+        flex-direction: row;
+    }
 
     &__content {
         padding: 50px;
+        font-family:Montserrat,Arial,Verdana,sans-serif;
     }
 
     &__contentItem {

@@ -65,22 +65,13 @@
         <input class="productForm__input" id="camara" type="text" name="cameraType"
             placeholder="Modelo de camara usada">
 
-        <label class="productForm__label">Tipo de Sesión</label>
-
-        <label class="productForm__label productForm__label--checkbox">
-            <input class="productForm__checkbox" type="checkbox" name="sessionType_e">
-            Estudio
-        </label>
-
-        <label class="productForm__label productForm__label--checkbox">
-            <input class="productForm__checkbox" type="checkbox" name="sessionType_eA">
-            Espacio abierto
-        </label>
-
-        <label class="productForm__label productForm__label--checkbox">
-            <input class="productForm__checkbox" type="checkbox" name="sessionType_p">
-            Producto
-        </label>
+        <label for="type" class="productForm__label"> tipo de sesión </label>
+        <select name="type" class="productForm__input" id="type">
+            <option value=""> Selecciona un tipo de sesión</option>
+            <option value="nature"> Espacio abierto</option>
+            <option value="studio"> Estudio </option>
+            <option value="product"> Producto </option>
+        </select>
 
         <label class="productForm__label" for="lente">Lente</label>
         <input class="productForm__input" id="lente" type="text" name="configuration_lens"
@@ -109,7 +100,7 @@
             <img class="productForm__image hidden" src="" />
         </div>
         <label class="productForm__label" for="image">Fotografías</label>
-        <input class="productForm__input" id="image" type="file" name="image">
+        <input multiple accept=".jpg,.png,.webp,.jfif" class="productForm__input" id="image" type="file" name="image">
 
         <button class="button button--form" type="submit">Enviar</button>
 
@@ -133,13 +124,14 @@
 
     </footer>
 
-    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+  
 
-
+    <script src="./scripts/general.js"></script>
     <script src="./scripts/productForm.js"></script>
-
 </body>
 
 </html>

@@ -3,3 +3,35 @@
     display: none !important;
 
 }
+
+.showLoggedAdmin {
+
+    &--del{
+        background-color: rgb(177, 65, 65);
+        border-color: rgb(138, 41, 41);
+        color: whitesmoke;
+        border-radius: 5px;
+        font-family:Montserrat,Arial,Verdana,sans-serif;
+    }
+
+}
+
+.authButtons {
+
+    font-size: 14px;
+    font-family:Montserrat,Arial,Verdana,sans-serif;
+
+    &__login {
+        color: white;
+        background-color: rgb(221, 132, 2);
+        border-color: rgb(190, 122, 19);
+        border-radius: 5px;
+    }
+
+    &__logout {
+        color: white;
+        background-color: rgb(221, 132, 2);
+        border-color: rgb(190, 122, 19);
+        border-radius: 5px;
+    }
+}

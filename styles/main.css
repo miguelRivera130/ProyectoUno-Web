@@ -156,6 +156,8 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  font-family: Montserrat,Arial,Verdana,sans-serif;
+  font-size: 14px;
 }
 
 .Diaphragm__content {
@@ -257,8 +259,9 @@
 .button {
   color: white;
   background-color: #dd8402;
-  border-color: #a86400;
+  border-color: #be7a13;
   font-size: 14px;
+  font-family: Montserrat,Arial,Verdana,sans-serif;
 }
 
 .button--newsletter {
@@ -292,6 +295,13 @@
   right: 60px;
   height: 30px;
   border-radius: 10px;
+}
+
+.button--form {
+  width: 15%;
+  height: 30px;
+  border-radius: 8px;
+  margin-top: 25px;
 }
 
 .membership {
@@ -381,10 +391,22 @@
 }
 
 .productForm {
+  font-family: Montserrat,Arial,Verdana,sans-serif;
+  font-size: 18px;
   width: 70%;
   background-color: white;
   padding: 25px;
   margin: 25px 15%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .productForm__label {
@@ -424,6 +446,33 @@
   display: none !important;
 }
 
+.showLoggedAdmin--del {
+  background-color: #b14141;
+  border-color: #8a2929;
+  color: whitesmoke;
+  border-radius: 5px;
+  font-family: Montserrat,Arial,Verdana,sans-serif;
+}
+
+.authButtons {
+  font-size: 14px;
+  font-family: Montserrat,Arial,Verdana,sans-serif;
+}
+
+.authButtons__login {
+  color: white;
+  background-color: #dd8402;
+  border-color: #be7a13;
+  border-radius: 5px;
+}
+
+.authButtons__logout {
+  color: white;
+  background-color: #dd8402;
+  border-color: #be7a13;
+  border-radius: 5px;
+}
+
 .list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -452,11 +501,17 @@
 
 .product__img {
   width: 100%;
+  max-height: 250px;
+  min-height: 250px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .product__info {
   padding: 5px;
   margin: 10px 5%;
+  font-family: Montserrat,Arial,Verdana,sans-serif;
 }
 
 .product__name {
@@ -491,10 +546,22 @@
 }
 
 .productForm {
+  font-family: Montserrat,Arial,Verdana,sans-serif;
+  font-size: 18px;
   width: 70%;
   background-color: white;
   padding: 25px;
   margin: 25px 15%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .productForm__label {
@@ -540,7 +607,7 @@
           flex-direction: column;
   width: 20%;
   height: 100%;
-  margin-top: 5%;
+  margin: 3%;
   font-size: 16px;
   padding: 20px;
   background-color: white;
@@ -551,6 +618,37 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.productInfo__description {
+  font-family: Montserrat,Arial,Verdana,sans-serif;
+}
+
+.productInfo__name {
+  color: #dd8402;
+}
+
+.productInfo__price {
+  color: #dd8402;
+}
+
+.productInfo__descriptionCanva {
+  width: 70%;
+  margin: 0 15%;
+  font-size: 12px;
+  padding: 5px;
+  border: 1px solid #aeaeae;
+}
+
+.productInfo__descriptionSesion {
+  margin: 5px;
 }
 
 .modal {
@@ -602,40 +700,89 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  width: 100%;
+  margin: 25px 0px;
+}
+
+.checkout__list {
+  width: 60%;
+  margin-left: 5%;
 }
 
 .checkout__summary {
+  margin-right: 5%;
+  width: 20%;
   background-color: white;
   padding: 25px;
-  margin: 25px 5%;
   position: absolute;
   right: 0;
 }
 
-.field {
-  margin: 10px 0;
+.checkout__total {
+  font-family: Mazzard,Arial,Verdana,sans-serif;
+  color: #dd8402;
+  font-size: 22px;
 }
 
-.field__input {
-  width: 100px;
+.checkout__send {
+  color: white;
+  background-color: #3b74f0;
+  border-color: #2a5fd3;
+  font-size: 12px;
+  font-family: Montserrat,Arial,Verdana,sans-serif;
 }
 
 .cartProduct {
+  background-color: whitesmoke;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: white;
-  margin: 25px 5%;
-  width: 1250px;
+  position: relative;
+  margin-bottom: 10px;
 }
 
 .cartProduct__img {
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 100%;
-  max-height: 200px;
+  max-height: 150px;
+  min-height: 150px;
+  width: 100%;
+  max-width: 220px;
+  min-width: 220px;
 }
 
 .cartProduct__info {
-  padding: 10px;
+  margin-left: 25px;
+}
+
+.cartProduct__del {
+  top: 10px;
+  right: 10px;
+  position: absolute;
+  background-color: #b14141;
+  border-color: #8a2929;
+  color: #8a2929;
+  border-radius: 5px;
+}
+
+.cartProduct__name {
+  color: #dd8402;
+}
+
+.field {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 12px;
+  margin-bottom: 10px;
 }
 
 body {

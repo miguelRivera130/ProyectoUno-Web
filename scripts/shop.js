@@ -1,5 +1,5 @@
 const list = document.querySelector('.list');
-const filters = document.querySelector('.Diaphragm__filters');
+const sendBtn = document.querySelector('.checkout__send');
 
 const handleCollectionResult = function (querySnapshot) {
     list.innerHTML = '';
@@ -35,21 +35,26 @@ const handleCollectionResult = function (querySnapshot) {
         cartBtn.addEventListener('click', function () {
             cart.push(data);
             localStorage.setItem('item__cart', JSON.stringify(cart));
+            alert("Elemento agregado al carrito");
             cartBtnNumber.innerText = cart.length;
         });
 
         const delBtn = product.querySelector('.showLoggedAdmin--del');
         delBtn.addEventListener('click', function () {
-            data.ref("products/" + doc.id).set(null);
-        })
+            db.collection("products").doc(`${doc.id}`).delete().then(() => {
+                window.location.href = 'shop.html';
+            }).catch((error) => {
+                alert("Error removing document: ", error);
+            });
+        });
 
     });
 };
 
+const filters = document.querySelector('.Diaphragm__filters');
 filters.addEventListener('change', function () {
 
     let productsCollection = db.collection('products');
-    console.log(filters.type.value);
 
     if (filters.type.value) {
         productsCollection = productsCollection.where('sessionType', '==', filters.type.value);
@@ -61,7 +66,6 @@ filters.addEventListener('change', function () {
 
     if (filters.price.value) {
 
-        console.log(filters.price.value);
         switch (filters.price.value) {
 
             case 'cheap':

@@ -1,11 +1,11 @@
 var firebaseConfig = {
-  apiKey: "AIzaSyAN6Yl2M4yMvcRfGrBFatZfrjWtA1l0Llo",
-  authDomain: "proyecto-web-95fd3.firebaseapp.com",
-  projectId: "proyecto-web-95fd3",
-  storageBucket: "proyecto-web-95fd3.appspot.com",
-  messagingSenderId: "795682066356",
-  appId: "1:795682066356:web:5da86be72b5afede2face1",
-  measurementId: "G-X8DK5TX582"
+  apiKey: "AIzaSyBSxUlpQSsdWQywE6fw5B0jCWwbIYrM3D8",
+  authDomain: "proyecto-finalweb.firebaseapp.com",
+  projectId: "proyecto-finalweb",
+  storageBucket: "proyecto-finalweb.appspot.com",
+  messagingSenderId: "856505514809",
+  appId: "1:856505514809:web:422d998c0be7ba7d9806e8",
+  measurementId: "G-16VVV7XHGR"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
@@ -36,6 +36,8 @@ firebase.auth().onAuthStateChanged((user) => {
 
 let cart = [];
 const cartBtnNumber = document.querySelector('.cartButton__span');
+const CART_COLLECTION = db.collection('cart');
+const ORDERS_COLLECTION = db.collection('orders');
 
 const cartFromLS = localStorage.getItem('item__cart');
 if (cartFromLS) {

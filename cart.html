@@ -47,8 +47,6 @@
 
         </section>
 
-        <div class="checkout__division"> </div>
-
         <section class="checkout__summary">
             <h3 class="checkout__total">Total: $ <span></span></h3>
 
@@ -59,21 +57,21 @@
                 </div>
 
                 <div class="field">
-                    <label class="field__label" for="address">Nombre de titular</label>
-                    <input class="field__input" id="address" name="address" type="text" placeholder="">
+                    <label class="field__label" for="ccname">Nombre de titular</label>
+                    <input class="field__input" id="ccname" name="ccname" type="text" placeholder="">
                 </div>
 
                 <div class="field">
-                    <label class="field__label" for="address">Caducidad</label>
-                    <input class="field__input" id="address" name="address" type="date" placeholder="">
+                    <label class="field__label" for="ccdate">Caducidad</label>
+                    <input class="field__input" id="ccdate" name="ccdate" type="date" placeholder="">
                 </div>
 
                 <div class="field">
-                    <label class="field__label" for="address">CVC</label>
-                    <input class="field__input" id="address" name="address" type="text" placeholder="">
+                    <label class="field__label" for="cvc">CVC</label>
+                    <input class="field__input" id="cvc" name="cvc" type="text" placeholder="">
                 </div>
 
-                <button type="submit">Send</button>
+                <button class="checkout__send hidden showLoggedIn" type="submit">Enviar</button>
             </form>
         </section>
     </main>
@@ -86,6 +84,7 @@
     <script src="./scripts/general.js"></script>
     <script src="./scripts/cart.js"></script>
     <script src="./scripts/authUtils.js"></script>
+    <script src="./scripts/authModal.js"></script>
 
 </body>
 

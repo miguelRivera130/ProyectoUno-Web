@@ -4,7 +4,7 @@
     flex-direction: column;
     width: 20%;
     height: 100%;
-    margin-top: 5%;
+    margin: 3%;
     font-size: 16px;
     padding: 20px;
 
@@ -13,6 +13,33 @@
 
     &__final{
         align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__description {
+    font-family:Montserrat,Arial,Verdana,sans-serif;
+    }
+
+    &__name {
+        color: rgb(221, 132, 2);
+    }
+
+    &__price {
+        color: rgb(221, 132, 2);
+    }
+
+    &__descriptionCanva {
+        width: 70%;
+        margin: 0 15%;
+        font-size: 12px;
+        padding: 5px;
+
+        border: 1px solid rgb(174, 174, 174);
+    }
+
+    &__descriptionSesion {
+        margin: 5px;
     }
 
 }

@@ -39,6 +39,7 @@ productForm.addEventListener('submit', function (event) {
     const product = {
 
         name: productForm.name.value,
+        id: db.collection("products").doc().id,
         author: productForm.author.value,
         cameraType: productForm.cameraType.value,
         sessionType: productForm.type.value,

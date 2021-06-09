@@ -54,18 +54,18 @@
             Es necesario que complete toda la informacion para subir el producto
         </p>
 
-        <label class="productForm__label" for="nombre">Titulo</label>
+        <label class="productForm__label" for="nombre"><strong>Titulo</strong></label>
         <input class="productForm__input" id="nombre" type="text" name="name" placeholder="Nombre del proyecto">
 
-        <label class="productForm__label" for="autor">Autor</label>
+        <label class="productForm__label" for="autor"><strong>Autor</strong></label>
         <input class="productForm__input" class="productForm__input" id="autor" name="author" type="text"
             placeholder="Nombre del autor">
 
-        <label class="productForm__label" for="camara">Camara</label>
+        <label class="productForm__label" for="camara"><strong>Camara</strong></label>
         <input class="productForm__input" id="camara" type="text" name="cameraType"
             placeholder="Modelo de camara usada">
 
-        <label for="type" class="productForm__label"> tipo de sesión </label>
+        <label for="type" class="productForm__label"><strong> tipo de sesión </strong></label>
         <select name="type" class="productForm__input" id="type">
             <option value=""> Selecciona un tipo de sesión</option>
             <option value="nature"> Espacio abierto</option>
@@ -73,33 +73,33 @@
             <option value="product"> Producto </option>
         </select>
 
-        <label class="productForm__label" for="lente">Lente</label>
+        <label class="productForm__label" for="lente"><strong>Lente</strong></label>
         <input class="productForm__input" id="lente" type="text" name="configuration_lens"
             placeholder="ƒ/ del lente utilizado">
 
-        <label class="productForm__label" for="longitud">Longitud focal</label>
+        <label class="productForm__label" for="longitud"><strong>Longitud focal</strong></label>
         <input class="productForm__input" id="longitud" type="text" name="configuration_length"
             placeholder="mm de distancia de enfoque">
 
-        <label class="productForm__label" for="iso">ISO</label>
+        <label class="productForm__label" for="iso"><strong>ISO</strong></label>
         <input class="productForm__input" id="iso" type="text" name="configuration_iso" placeholder="ISO utilizado">
 
-        <label class="productForm__label" for="exposicion">Exposición</label>
+        <label class="productForm__label" for="exposicion"><strong>Exposición</strong></label>
         <input class="productForm__input" id="exposicion" type="text" name="configuration_exposition"
             placeholder="tiempo de exposición">
 
-        <label class="productForm__label" for="precio">Precio</label>
+        <label class="productForm__label" for="precio"><strong>Precio</strong></label>
         <input class="productForm__input" id="precio" type="number" name="price"
             placeholder="Precio de venta de la sesión">
 
-        <label class="productForm__label" for="descripcion">Descripción</label>
+        <label class="productForm__label" for="descripcion"><strong>Descripción</strong></label>
         <input class="productForm__input" id="descripcion" type="text" name="description"
             placeholder="Describe aquí tu sesión">
 
         <div class="productForm__images">
             <img class="productForm__image hidden" src="" />
         </div>
-        <label class="productForm__label" for="image">Fotografías</label>
+        <label class="productForm__label" for="image"><strong>Fotografías</strong></label>
         <input multiple accept=".jpg,.png,.webp,.jfif" class="productForm__input" id="image" type="file" name="image">
 
         <button class="button button--form" type="submit">Enviar</button>
@@ -128,7 +128,7 @@
     <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-storage.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
-  
+
 
     <script src="./scripts/general.js"></script>
     <script src="./scripts/productForm.js"></script>

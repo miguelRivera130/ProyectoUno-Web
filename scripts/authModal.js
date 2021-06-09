@@ -6,25 +6,25 @@ authModal.innerHTML = `
       <button class="modal__close">X</button>
       <form class="authform">
         <label class="authform__regfield productForm__label">
-          Firstname
+          Nombre
           <input class="productForm__input" type="text" name="firstname">
         </label>
         <label class="authform__regfield productForm__label">
-          Lastname
+          Apellido
           <input class="productForm__input" type="text" name="lastname">
         </label>
         <label class="productForm__label">
-          Email
+          Correo electronico
           <input class="productForm__input" type="email" name="email">
         </label>
         <label class="productForm__label">
-          Password
+          Contraseña
           <input class="productForm__input" type="password" name="password">
         </label>
         <p class="productForm__error"></p>
-        <button type="button" class="authform__register">Go to register</button>
-        <button type="button" class="authform__login">Go to login</button>
-        <button type="submit">Send</button>
+        <button type="button" class="authform__register">Registrate</button>
+        <button type="button" class="authform__login">Logeate</button>
+        <button type="submit">Enviar</button>
       </form>
     </article>
 `;
@@ -59,8 +59,6 @@ registerBtn.addEventListener('click', function () {
   registerBtn.classList.add('hidden');
   isLogin = false;
 });
-
-handleGoToLogin();
 
 authForm.addEventListener('submit', function (event) {
   event.preventDefault();
@@ -122,6 +120,8 @@ function handleCloseModal() {
     authModal.style.display = 'none';
   }, 500);
 }
+
+handleCloseModal();
 
 authLogout.addEventListener('click', function () {
   firebase.auth().signOut();
